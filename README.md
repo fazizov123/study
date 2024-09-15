@@ -1,3 +1,3 @@
 sdfsdfziyotek is the best.
 changing this readme file
-diff host for this repo
+today we gonna be learning connections.
