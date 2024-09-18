@@ -1,0 +1,7 @@
+Passwordless connection between W and L
+W:    Ctrl+R --> cmd --> command prompt
+W:    ssh-keygen -t rsa --> skip everything with Enter - generate keygen for Windows
+L:    mkdir -p ~/.ssh - create .ssh directory (you probably have this so skip this step)
+W:    scp C:\Users\adam\.ssh\id_rsa.pub root@centos-server-ip:~/.ssh/ - copy pubkey to centos
+L:    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys - add key from windows to authorized keys in centos machine
+L:    systemctl restart sshd - restart ssh deamon
